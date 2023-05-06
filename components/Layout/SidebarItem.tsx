@@ -8,7 +8,7 @@ import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 type SidebarItemProps = {
   label: string;
   href?: string;
-  icon: string;
+  icon: IconType;
   onClick?: () => void;
   auth?: boolean;
   alert?: boolean;
