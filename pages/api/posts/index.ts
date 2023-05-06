@@ -41,17 +41,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             comments: true
           },
           orderBy: {
-            createAt: 'desc'
+            createdAt: 'desc'
           },
         });
       } else {
-        posts = await prisma.post.findMany({
+        posts = await prisma?.post.findMany({
           include: {
             user: true,
             comments: true
           },
           orderBy: {
-            createAt: 'desc'
+            createdAt: 'desc'
           }
         });
       }
